@@ -46,7 +46,7 @@ def get_occurrences(pattern, text):
     for i in range(t - p + 1):
         if p_hash == t_hash: # Compare the hash values
             if text[i:i+p] == pattern: # If hash values are same, then check if the pattern actually matches
-                output.append(i)
+                out.append(i)
                 
         if i < t - p: # Calculate hash for next segment of text
             t_hash = t_hash - ord(text[i])
